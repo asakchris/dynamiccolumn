@@ -1,1 +1,1 @@
-# dynamiccolumn
+# Spring JPA Generic Row Mapper

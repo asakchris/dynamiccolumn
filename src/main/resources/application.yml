@@ -1,0 +1,26 @@
+server:
+  port: 8000
+
+management:
+  server:
+    port: 8001
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+
+spring:
+  application:
+    name: DynamicColumn
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: ${DB_URL}
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: ${DB_USER_NAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
